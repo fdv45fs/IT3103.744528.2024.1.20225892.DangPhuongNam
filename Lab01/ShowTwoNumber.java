@@ -1,4 +1,4 @@
-import javax.swing.*;
+import javax.swing.JOptionPane;
 
 public class ShowTwoNumber {
     public static void main(String[] args){
