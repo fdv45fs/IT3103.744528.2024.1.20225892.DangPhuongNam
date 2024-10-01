@@ -3,7 +3,7 @@ import javax.swing.JOptionPane;
 public class ShowTwoNumber {
     public static void main(String[] args){
         String strNum1, strNum2;
-        String strNotification = "You've just entered: ";
+        String strNotification = "Dang Phuong Nam 20225892\nYou've just entered: ";
 
         strNum1 = JOptionPane.showInputDialog(null, "Please input the first number: ", "Input the first number", JOptionPane.INFORMATION_MESSAGE);
         strNotification += strNum1 + " and ";
