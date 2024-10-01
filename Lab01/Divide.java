@@ -12,7 +12,7 @@ public class Divide {
         double difference = num1 - num2;
         double product = num1*num2;
 
-        String text = "Sum: "+sum +"\n"+ "Difference: " + difference + "\n" + "Product: " + product + "\n";
+        String text = "Dang Phuong Nam 20225892\nSum: "+sum +"\n"+ "Difference: " + difference + "\n" + "Product: " + product + "\n";
 
         if (num2 != 0) {
             double quotient = num1/num2;
