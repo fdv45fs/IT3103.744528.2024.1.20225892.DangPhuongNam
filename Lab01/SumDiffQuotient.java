@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-public class Divide {
+public class SumDiffQuotient {
     public static void main(String[] args) {
         String strNum1 = JOptionPane.showInputDialog("Enter the first number:");
         String strNum2 = JOptionPane.showInputDialog("Enter the second number:");
