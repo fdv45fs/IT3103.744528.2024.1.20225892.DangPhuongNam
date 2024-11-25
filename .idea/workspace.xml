@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8cead6a7-6590-4681-bf6f-fc44f2515ddf" name="Changes" comment="Overloading methods in Cart" />
+    <list default="true" id="8cead6a7-6590-4681-bf6f-fc44f2515ddf" name="Changes" comment="Remove a Lab03 file in Lab02">
+      <change afterPath="$PROJECT_DIR$/Lab03/AimsProject/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab03/AimsProject/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab03/AimsProject/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab03/AimsProject/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab03/AimsProject/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab03/AimsProject/AimsProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab03/AimsProject/src/Aims.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab03/AimsProject/src/Cart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab03/AimsProject/src/DigitalVideoDisc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,15 +127,7 @@
       <option name="project" value="LOCAL" />
       <updated>1732557978143</updated>
     </task>
-    <task id="LOCAL-00006" summary="Overloading methods in Cart">
-      <option name="closed" value="true" />
-      <created>1732560660454</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1732560660454</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,7 +158,6 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="Finishing reconfiguration" />
     <MESSAGE value="Remove a Lab03 file in Lab02" />
-    <MESSAGE value="Overloading methods in Cart" />
-    <option name="LAST_COMMIT_MESSAGE" value="Overloading methods in Cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove a Lab03 file in Lab02" />
   </component>
 </project>
