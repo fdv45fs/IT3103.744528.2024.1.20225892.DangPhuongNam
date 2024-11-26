@@ -12,6 +12,10 @@ public class DigitalVideoDisc {
         id = nbDigitalVideoDiscs;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public void setTitle(String title) {
         this.title = title;
     }
@@ -65,5 +69,9 @@ public class DigitalVideoDisc {
         this.cost = cost;
         nbDigitalVideoDiscs++;
         id = nbDigitalVideoDiscs;
+    }
+
+    public String toString() {
+        return id + ". DVD - " + title + " - " + category + " - " + director + " - " + length + ": " + cost + " $";
     }
 }

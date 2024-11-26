@@ -1,3 +1,6 @@
+import java.util.HashSet;
+import java.util.Set;
+
 public class Cart {
     public static final int MAX_NUMBERS_ORDERED = 20;
     private final DigitalVideoDisc[] itemsOrdered = new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
@@ -70,4 +73,49 @@ public class Cart {
         return total;
     }
 
+
+    public void print() {
+        System.out.println("***********************CART***********************");
+        System.out.println("Ordered Items:");
+        for (int i = 0; i < qtyOrdered; i++) {
+            System.out.println(itemsOrdered[i].toString());
+        }
+        System.out.println("Total cost: " + totalCost());
+        System.out.println("***************************************************");
+    }
+
+    public void searchDigitalVideoDisc(int id) {
+        boolean found = false;
+        for (int i = 0; i < qtyOrdered; i++) {
+            if (itemsOrdered[i].getId() == id) {
+                System.out.println("Found: " + itemsOrdered[i].toString());
+                found = true;
+            }
+        }
+        if (!found) {
+            System.out.println("No match found for the id: " + id);
+        }
+    }
+
+    public void searchDigitalVideoDisc(String title) {
+        boolean found = false;
+        String[] keywords = title.toLowerCase().split(" ");
+        Set<Integer> Ids = new HashSet<>();
+        for (int i = 0; i < qtyOrdered; i++) {
+            for (String keyword : keywords) {
+                if (itemsOrdered[i].getTitle().toLowerCase().contains(keyword)) {
+                    Ids.add(i);
+                    found = true;
+                }
+            }
+        }
+        if (!found) {
+            System.out.println("No match found for the title: " + title);
+        }
+        else {
+            for (Integer id : Ids) {
+                System.out.println("Found: " + itemsOrdered[id].toString());
+            }
+        }
+    }
 }
