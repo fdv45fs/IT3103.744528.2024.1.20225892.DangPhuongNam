@@ -2,7 +2,7 @@ package hust.ite6.garbage;
 
 public class NoGarbage {
     public static void main(String[] args) throws Exception {
-        String filename = "test.txt"; // test.exe is the name or path to an executable file
+        String filename = "Lab03/OtherProjects/test.txt"; // test.exe is the name or path to an executable file
         byte[] inputBytes = { 0 };
         long startTime, endTime;
 
