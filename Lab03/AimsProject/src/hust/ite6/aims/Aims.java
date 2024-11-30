@@ -1,3 +1,8 @@
+package hust.ite6.aims;
+
+import hust.ite6.aims.cart.Cart;
+import hust.ite6.aims.disc.DigitalVideoDisc;
+
 public class Aims {
     public static void main(String[] args) {
 

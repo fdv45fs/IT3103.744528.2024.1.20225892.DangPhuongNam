@@ -1,3 +1,7 @@
+package hust.ite6.aims.cart;
+
+import hust.ite6.aims.disc.DigitalVideoDisc;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -21,7 +25,7 @@ public class Cart {
         }
     }
 
-//    public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
+//    public void addDigitalVideoDisc(hust.ite6.aims.disc.DigitalVideoDisc[] dvdList) {
 //        int i = 0;
 //        while (qtyOrdered < MAX_NUMBERS_ORDERED && i < dvdList.length) {
 //            itemsOrdered[qtyOrdered] = dvdList[i];

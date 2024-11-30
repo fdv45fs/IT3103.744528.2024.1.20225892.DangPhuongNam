@@ -1,3 +1,7 @@
+package hust.ite6.aims.store;
+
+import hust.ite6.aims.disc.DigitalVideoDisc;
+
 public class Store {
     private DigitalVideoDisc[] itemsInStore;
 

@@ -1,3 +1,8 @@
+package hust.ite6.test.cart;
+
+import hust.ite6.aims.cart.Cart;
+import hust.ite6.aims.disc.DigitalVideoDisc;
+
 public class CartTest {
     public static void main(String[] args) {
         Cart cart = new Cart();

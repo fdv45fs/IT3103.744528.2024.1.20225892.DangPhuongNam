@@ -1,3 +1,8 @@
+package hust.ite6.test.store;
+
+import hust.ite6.aims.disc.DigitalVideoDisc;
+import hust.ite6.aims.store.Store;
+
 public class StoreTest {
     public static void main(String[] args) {
         Store store = new Store(5);

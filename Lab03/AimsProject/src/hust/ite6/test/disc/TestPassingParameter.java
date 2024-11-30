@@ -1,3 +1,7 @@
+package hust.ite6.test.disc;
+
+import hust.ite6.aims.disc.DigitalVideoDisc;
+
 public class TestPassingParameter {
     public static void main(String[] args) {
         DigitalVideoDisc jungleDVD = new DigitalVideoDisc("Jungle");

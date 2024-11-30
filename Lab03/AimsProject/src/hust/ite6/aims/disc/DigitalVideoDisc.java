@@ -1,3 +1,5 @@
+package hust.ite6.aims.disc;
+
 public class DigitalVideoDisc {
     private String title;
     private String category;
