@@ -1,6 +1,6 @@
 package hust.ite6.test.store;
 
-import hust.ite6.aims.disc.DigitalVideoDisc;
+import hust.ite6.aims.media.DigitalVideoDisc;
 import hust.ite6.aims.store.Store;
 
 public class StoreTest {
