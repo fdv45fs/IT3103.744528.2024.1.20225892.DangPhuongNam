@@ -6,8 +6,8 @@ import java.util.List;
 public class Book extends Media {
     private List<String> authors = new ArrayList<String>();
 
-    public Book(int id, String title, String category, float cost) {
-        super(id, title, category, cost);
+    public Book(String title, String category, float cost) {
+        super(title, category, cost);
     }
 
     public List<String> getAuthors() {
@@ -24,5 +24,10 @@ public class Book extends Media {
     public void removeAuthor(String authorName) {
         authors.remove(authorName);
         // the remove method automatically checks for existence
+    }
+
+    @Override
+    public String toString() {
+        return getId() + ". Book - " + getTitle() + " - " + getCategory() + " - " + authors + ": " + getCost() + " $";
     }
 }
