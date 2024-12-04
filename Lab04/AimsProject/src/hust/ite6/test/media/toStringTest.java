@@ -7,7 +7,7 @@ import java.util.List;
 
 public class toStringTest {
     public static void main(String[] args) {
-        List<Media> medias = new ArrayList<Media>();
+        List<Media> medias = new ArrayList<>();
 
         CompactDisc cd = new CompactDisc("TieuDeCD", "TheLoaiCD", 15.2f, "DaoDienCD", "NgheSiCD");
         cd.addTrack(new Track("TieuDeTrack1", 3));

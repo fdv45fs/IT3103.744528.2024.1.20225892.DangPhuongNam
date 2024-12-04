@@ -20,10 +20,6 @@ public abstract class Media {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getTitle() {
         return title;
     }
@@ -36,16 +32,8 @@ public abstract class Media {
         return category;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
     public float getCost() {
         return cost;
-    }
-
-    public void setCost(float cost) {
-        this.cost = cost;
     }
 
     public Media(String title, String category, float cost) {
@@ -63,4 +51,6 @@ public abstract class Media {
         else return false;
     }
 
+    @Override
+    public abstract String toString();
 }

@@ -3,8 +3,6 @@ package hust.ite6.test.media;
 import hust.ite6.aims.media.*;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 public class sortTest {

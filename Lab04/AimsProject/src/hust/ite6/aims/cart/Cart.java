@@ -3,9 +3,11 @@ package hust.ite6.aims.cart;
 import hust.ite6.aims.media.Media;
 
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Cart {
-    public static final int MAX_NUMBERS_ORDERED = 20;
     private ArrayList<Media> itemsOrdered = new ArrayList<Media>();
 
     public Cart() {
@@ -34,49 +36,45 @@ public class Cart {
         return total;
     }
 
+    public int getSizeItemsOrdered() {
+        return itemsOrdered.size();
+    }
 
-//    public void print() {
-//        System.out.println("***********************CART***********************");
-//        System.out.println("Ordered Items:");
-//        for (int i = 0; i < qtyOrdered; i++) {
-//            System.out.println(itemsOrdered[i].toString());
-//        }
-//        System.out.println("Total cost: " + totalCost());
-//        System.out.println("***************************************************");
-//    }
+    public void print() {
+        System.out.println("***********************CART***********************");
+        System.out.println("Ordered Items:");
+        for (Media m : itemsOrdered) {
+            System.out.println(m);
+        }
+        System.out.println("Total cost: " + totalCost());
+        System.out.println("***************************************************");
+    }
 
-//    public void searchDigitalVideoDisc(int id) {
-//        boolean found = false;
-//        for (int i = 0; i < qtyOrdered; i++) {
-//            if (itemsOrdered[i].getId() == id) {
-//                System.out.println("Found: " + itemsOrdered[i].toString());
-//                found = true;
-//            }
-//        }
-//        if (!found) {
-//            System.out.println("No match found for the id: " + id);
-//        }
-//    }
+    public Media searchMedia(int id) {
+        for (Media media : itemsOrdered) {
+            if (media.getId() == id) {
+                //System.out.println("Found: " + media.toString());
+                return media;
+            }
+        }
+        //System.out.println("No match found for the id: " + id);
+        return null;
+    }
 
-//    public void searchDigitalVideoDisc(String title) {
-//        boolean found = false;
-//        String[] keywords = title.toLowerCase().split(" ");
-//        Set<Integer> Ids = new HashSet<>();
-//        for (int i = 0; i < qtyOrdered; i++) {
-//            for (String keyword : keywords) {
-//                if (itemsOrdered[i].getTitle().toLowerCase().contains(keyword)) {
-//                    Ids.add(i);
-//                    found = true;
-//                }
-//            }
-//        }
-//        if (!found) {
-//            System.out.println("No match found for the title: " + title);
-//        }
-//        else {
-//            for (Integer id : Ids) {
-//                System.out.println("Found: " + itemsOrdered[id].toString());
-//            }
-//        }
-//    }
+    public Media[] searchMedia(String title) {
+        String[] keywords = title.toLowerCase().split(" ");
+        Set<Media> retMedia = new HashSet<>();
+        for (Media media : itemsOrdered) {
+            for (String keyword : keywords) {
+                if (media.getTitle().toLowerCase().contains(keyword)) {
+                    retMedia.add(media);
+                }
+            }
+        }
+        return retMedia.toArray(new Media[0]);
+    }
+
+    public void sortMedia(Comparator<Media> cmp) {
+        itemsOrdered.sort(cmp);
+    }
 }

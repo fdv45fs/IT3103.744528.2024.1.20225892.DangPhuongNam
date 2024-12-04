@@ -1,6 +1,6 @@
 package hust.ite6.aims.media;
 
-public class Disc extends Media {
+public abstract class Disc extends Media {
     protected int length;
     protected String director;
 
@@ -18,4 +18,6 @@ public class Disc extends Media {
         this.director = director;
     }
 
+    @Override
+    public abstract String toString();
 }
