@@ -1,5 +1,6 @@
 package hust.ite6.aims.media;
 
+import java.util.Comparator;
 import java.util.Objects;
 
 public abstract class Media {
@@ -8,6 +9,8 @@ public abstract class Media {
     private String category;
     private float cost;
     private static int nbMedia = 0;
+    public static final Comparator<Media> COMPARE_BY_TITLE_COST = new MediaComparatorByTitleCost();
+    public static final Comparator<Media> COMPARE_BY_COST_TITLE = new MediaComparatorByCostTitle();
 
     public static int getNbMedia() {
         return nbMedia;
@@ -59,4 +62,5 @@ public abstract class Media {
         }
         else return false;
     }
+
 }
