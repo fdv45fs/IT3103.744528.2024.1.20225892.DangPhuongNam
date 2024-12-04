@@ -1,5 +1,7 @@
 package hust.ite6.aims.media;
 
+import java.util.Objects;
+
 public abstract class Media {
     private int id;
     private String title;
@@ -43,5 +45,13 @@ public abstract class Media {
         this.title = title;
         this.category = category;
         this.cost = cost;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Media media) {
+            return Objects.equals(this.getTitle(), media.getTitle());
+        }
+        else return false;
     }
 }
