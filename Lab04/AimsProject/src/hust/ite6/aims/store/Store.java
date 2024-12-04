@@ -1,33 +1,27 @@
 package hust.ite6.aims.store;
 
-import hust.ite6.aims.media.DigitalVideoDisc;
+import hust.ite6.aims.media.Media;
+
+import java.util.ArrayList;
 
 public class Store {
-    private DigitalVideoDisc[] itemsInStore;
+    private ArrayList<Media> itemsInStore = new ArrayList<Media>();
 
-    public Store(int capacity) {
-        itemsInStore = new DigitalVideoDisc[capacity];
+    public Store() {
+
     }
 
-    public void addDVD(DigitalVideoDisc dvd) {
-        for (int i = 0; i < itemsInStore.length; i++) {
-            if (itemsInStore[i] == null) {
-                itemsInStore[i] = dvd;
-                System.out.println("The DVD " + dvd.getTitle() + " has been added to the store. Dang Phuong Nam 20225892");
-                return;
-            }
+    public void addMedia(Media... mediaList) {
+        for (Media media : mediaList) {
+            itemsInStore.add(media);
+            System.out.println("The Media " + media.getTitle() + " has been added to the store. Dang Phuong Nam 20225892");
         }
-        System.out.println("The store is full. Dang Phuong Nam 20225892");
     }
 
-    public void removeDVD(DigitalVideoDisc dvd) {
-        for (int i = 0; i < itemsInStore.length; i++) {
-            if (itemsInStore[i] == dvd) {
-                itemsInStore[i] = null;
-                System.out.println("The DVD " + dvd.getTitle() + " has been removed from the store. Dang Phuong Nam 20225892");
-                return;
-            }
-        }
-        System.out.println("The DVD is not in the store. Dang Phuong Nam 20225892");
+    public void removeMedia(Media media) {
+        if (itemsInStore.remove(media))
+            System.out.println("The Media has been removed from the store. Dang Phuong Nam 20225892");
+        else
+            System.out.println("The Media is not in the store. Dang Phuong Nam 20225892");
     }
 }
