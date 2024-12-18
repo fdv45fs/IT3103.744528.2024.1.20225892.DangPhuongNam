@@ -13,6 +13,10 @@ public class Store {
 
     }
 
+    public ArrayList<Media> getItemsInStore() {
+        return itemsInStore;
+    }
+
     public void addMedia(Media... mediaList) {
         for (Media media : mediaList) {
             itemsInStore.add(media);
