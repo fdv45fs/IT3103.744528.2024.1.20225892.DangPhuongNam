@@ -4,8 +4,6 @@ import hust.ite6.aims.cart.Cart;
 import hust.ite6.aims.media.Media;
 import hust.ite6.aims.media.Playable;
 import javafx.application.Platform;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -54,6 +52,12 @@ public class CartScreenController {
         colMediaCost.setCellValueFactory(new PropertyValueFactory<Media, Float>("cost"));
         tblMedia.setItems(this.cart.getItemsOrdered());
         updateTotalCost();
+        cart.getItemsOrdered().addListener((javafx.collections.ListChangeListener<Media>) change -> {
+            while (change.next()) {
+                updateTotalCost();
+            }
+        });
+
         btnPlay.setVisible(false);
         btnRemove.setVisible(false);
 
@@ -63,6 +67,7 @@ public class CartScreenController {
                         updateButtonBar(newValue);
                     }
                 });
+
     }
 
     void updateButtonBar(Media media) {
