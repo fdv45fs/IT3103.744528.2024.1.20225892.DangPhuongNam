@@ -82,4 +82,8 @@ public class Cart {
     public void sortMedia(Comparator<Media> cmp) {
         itemsOrdered.sort(cmp);
     }
+
+    public void clear() {
+        itemsOrdered.clear();
+    }
 }
