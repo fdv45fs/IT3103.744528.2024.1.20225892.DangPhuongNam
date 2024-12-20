@@ -8,6 +8,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 import javax.swing.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.IOException;
 
 public class CartScreen extends JFrame {
@@ -23,6 +25,13 @@ public class CartScreen extends JFrame {
         this.setTitle("Cart");
         this.setSize(1037, 768);
         this.setVisible(true);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                Platform.exit();
+            }
+        });
         Platform.runLater(new Runnable() {
             @Override
             public void run() {

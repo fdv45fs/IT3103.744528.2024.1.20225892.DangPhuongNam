@@ -122,6 +122,7 @@ public class StoreScreen  extends JFrame {
         cp.add(createNorth(), BorderLayout.NORTH);
         cp.add(createCenter(), BorderLayout.CENTER);
 
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
         setTitle("Store");
         setSize(1024, 768);
