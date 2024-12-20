@@ -127,4 +127,11 @@ public class StoreScreen  extends JFrame {
         setTitle("Store");
         setSize(1024, 768);
     }
+
+    public void updateStoreScreen() {
+        getContentPane().remove(1);
+        getContentPane().add(createCenter(), BorderLayout.CENTER);
+        revalidate();
+        repaint();
+    }
 }

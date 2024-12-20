@@ -81,6 +81,8 @@ public class AddDigitalVideoDiscToStoreScreen extends AddItemToStoreScreen {
                 tfDirector.setText("");
                 tfLength.setText("");
                 tfCost.setText("");
+                // Update StoreScreen
+                parentScreen.updateStoreScreen();
             }
         });
 
