@@ -10,7 +10,6 @@ import java.util.Set;
 
 public class Cart {
     private ObservableList<Media> itemsOrdered = FXCollections.observableArrayList();
-
     public Cart() {
 
     }

@@ -1,6 +1,7 @@
 package hust.ite6.aims.screen;
 
 import hust.ite6.aims.cart.Cart;
+import hust.ite6.aims.exception.PlayerException;
 import hust.ite6.aims.media.Media;
 import hust.ite6.aims.media.Playable;
 
@@ -50,15 +51,14 @@ public class MediaStore extends JPanel{
                         playable.play();
 
                         // Display a dialog with the media content (replace with actual playback logic)
-                        JDialog playDialog = new JDialog();
-                        playDialog.setTitle("Playing: " + media.getTitle());
-                        playDialog.setSize(400, 300); // Set a reasonable size
-                        JTextArea textArea = new JTextArea("Playing content..."); // Assuming play() returns String
-                        textArea.setEditable(false);
-                        playDialog.add(new JScrollPane(textArea)); // Add a scroll pane for longer content
-                        playDialog.setVisible(true);
-
-                    } catch (Exception ex) {
+//                        JDialog playDialog = new JDialog();
+//                        playDialog.setTitle("Playing: " + media.getTitle());
+//                        playDialog.setSize(400, 300); // Set a reasonable size
+//                        JTextArea textArea = new JTextArea("Playing content..."); // Assuming play() returns String
+//                        textArea.setEditable(false);
+//                        playDialog.add(new JScrollPane(textArea)); // Add a scroll pane for longer content
+//                        playDialog.setVisible(true);
+                    } catch (PlayerException ex) {
                         // Handle any exceptions during playback
                         JOptionPane.showMessageDialog(MediaStore.this,
                                 "Error playing media: " + ex.getMessage(),

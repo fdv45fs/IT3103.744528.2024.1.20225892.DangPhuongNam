@@ -24,7 +24,7 @@ public class CartScreen extends JFrame {
 
         this.setTitle("Cart");
         this.setSize(1037, 768);
-        //this.setVisible(true);
+        this.setVisible(true);
         setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 //        addWindowListener(new WindowAdapter() {
 //            @Override

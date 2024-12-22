@@ -36,6 +36,14 @@ public class StoreScreen  extends JFrame {
             // Open the AddDVD screen when "Add DVD" is clicked
             new AddDigitalVideoDiscToStoreScreen(store, cart, StoreScreen.this);
         });
+        addCDMenuItem.addActionListener(e -> {
+            // Open the AddDVD screen when "Add DVD" is clicked
+            new AddCompactDiscToStoreScreen(store, cart, StoreScreen.this);
+        });
+        addBookMenuItem.addActionListener(e -> {
+            // Open the AddDVD screen when "Add DVD" is clicked
+            new AddBookToStoreScreen(store, cart, StoreScreen.this);
+        });
 
         smUpdateStore.add(addBookMenuItem);
         smUpdateStore.add(addCDMenuItem);
@@ -116,10 +124,6 @@ public class StoreScreen  extends JFrame {
 
         return center;
     }
-
-//    public Cart getCart() {
-//        return cart;
-//    }
 
     public StoreScreen(Store store, Cart cart) {
         this.store = store;

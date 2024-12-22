@@ -47,7 +47,7 @@ public class CartScreenController {
 
     @FXML
     private void initialize() {
-        System.out.println("CartScreenController.initialize() called"); // Add log
+        //System.out.println("CartScreenController.initialize() called"); // Add log
         colMediaTitle.setCellValueFactory(new PropertyValueFactory<Media, String>("title"));
         colMediaCategory.setCellValueFactory(new PropertyValueFactory<Media, String>("category"));
         colMediaCost.setCellValueFactory(new PropertyValueFactory<Media, Float>("cost"));
@@ -93,15 +93,16 @@ public class CartScreenController {
                 playable.play();
 
                 // Display a dialog with the media content (replace with actual playback logic)
-                Platform.runLater(() -> {
-                    JDialog playDialog = new JDialog();
-                    playDialog.setTitle("Playing: " + media.getTitle());
-                    playDialog.setSize(400, 300);
+//                Platform.runLater(() -> {
+//                    JDialog playDialog = new JDialog();
+//                    playDialog.setTitle("Playing: " + media.getTitle());
+//                    playDialog.setSize(400, 300);
+//                    String message = "Playing content...";
 //                    JTextArea textArea = new JTextArea(message);
 //                    textArea.setEditable(false);
 //                    playDialog.add(new JScrollPane(textArea));
-                    playDialog.setVisible(true);
-                });
+//                    playDialog.setVisible(true);
+//                });
 
             } catch (Exception ex) {
                 // Handle any exceptions during playback
