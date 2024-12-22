@@ -3,6 +3,7 @@ package hust.ite6.aims.screen;
 import hust.ite6.aims.cart.Cart;
 import hust.ite6.aims.media.*;
 import hust.ite6.aims.store.Store;
+import javafx.application.Platform;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,6 +14,7 @@ import java.util.ArrayList;
 public class StoreScreen  extends JFrame {
     private Store store;
     private Cart cart;
+    private CartScreen cartScreen;
 
     JPanel createNorth() {
         JPanel north = new JPanel();
@@ -51,8 +53,12 @@ public class StoreScreen  extends JFrame {
         JMenuItem viewCartMenuItem = new JMenuItem("View Cart");
         viewCartMenuItem.addActionListener(e -> {
             // Create and display the CartScreen
-            new CartScreen(cart);
-            //setVisible(false);
+            Platform.runLater(() -> {
+                if (cartScreen == null) {
+                    cartScreen = new CartScreen(cart);
+                }
+                cartScreen.setVisible(true);
+            });
         });
         menu.add(smUpdateStore);
         menu.add(viewStoreMenuItem);
@@ -80,9 +86,12 @@ public class StoreScreen  extends JFrame {
 
         cartButton.addActionListener(e -> {
             // Create and display the CartScreen
-            CartScreen cartScreen = new CartScreen(cart);
-            //dispose();
-            cartScreen.setVisible(true);
+            Platform.runLater(() -> {
+                if (cartScreen == null) {
+                    cartScreen = new CartScreen(cart);
+                }
+                cartScreen.setVisible(true);
+            });
         });
 
         header.add(Box.createRigidArea(new Dimension(10, 10)));

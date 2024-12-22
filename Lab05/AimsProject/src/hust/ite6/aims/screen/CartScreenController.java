@@ -47,6 +47,7 @@ public class CartScreenController {
 
     @FXML
     private void initialize() {
+        System.out.println("CartScreenController.initialize() called"); // Add log
         colMediaTitle.setCellValueFactory(new PropertyValueFactory<Media, String>("title"));
         colMediaCategory.setCellValueFactory(new PropertyValueFactory<Media, String>("category"));
         colMediaCost.setCellValueFactory(new PropertyValueFactory<Media, Float>("cost"));
