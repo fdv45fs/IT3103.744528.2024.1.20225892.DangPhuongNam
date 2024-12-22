@@ -7,8 +7,6 @@ import javafx.application.Platform;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class StoreScreen  extends JFrame {
@@ -50,13 +48,6 @@ public class StoreScreen  extends JFrame {
         smUpdateStore.add(addDVDMenuItem);
 
         JMenuItem viewStoreMenuItem = new JMenuItem("View Store");
-//        viewStoreMenuItem.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                // Switch to the Store view
-//                setVisible(true);
-//            }
-//        });
 
         JMenuItem viewCartMenuItem = new JMenuItem("View Cart");
         viewCartMenuItem.addActionListener(e -> {
@@ -84,7 +75,7 @@ public class StoreScreen  extends JFrame {
         JPanel header = new JPanel();
         header.setLayout(new BoxLayout(header, BoxLayout.X_AXIS));
 
-        JLabel title = new JLabel("AIMS");
+        JLabel title = new JLabel("AIMS Nam 20225892");
         title.setFont(new Font(title.getFont().getName(), Font.PLAIN, 50));
         title.setForeground(Color.CYAN);
 

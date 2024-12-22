@@ -11,11 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MediaStore extends JPanel{
-    //private Media media;
-    //private Cart cart;
     public MediaStore(Media media, Cart cart) {
-        //this.cart = cart;
-        //this.media = media;
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
         JLabel title = new JLabel(media.getTitle());
@@ -49,15 +45,6 @@ public class MediaStore extends JPanel{
                     try {
                         // Play the media
                         playable.play();
-
-                        // Display a dialog with the media content (replace with actual playback logic)
-//                        JDialog playDialog = new JDialog();
-//                        playDialog.setTitle("Playing: " + media.getTitle());
-//                        playDialog.setSize(400, 300); // Set a reasonable size
-//                        JTextArea textArea = new JTextArea("Playing content..."); // Assuming play() returns String
-//                        textArea.setEditable(false);
-//                        playDialog.add(new JScrollPane(textArea)); // Add a scroll pane for longer content
-//                        playDialog.setVisible(true);
                     } catch (PlayerException ex) {
                         // Handle any exceptions during playback
                         JOptionPane.showMessageDialog(MediaStore.this,

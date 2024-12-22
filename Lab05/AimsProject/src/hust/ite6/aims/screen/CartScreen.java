@@ -22,7 +22,7 @@ public class CartScreen extends JFrame {
         JFXPanel fxPanel = new JFXPanel();
         this.add(fxPanel);
 
-        this.setTitle("Cart");
+        this.setTitle("Cart Nam 20225892");
         this.setSize(1037, 768);
         this.setVisible(true);
         setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);

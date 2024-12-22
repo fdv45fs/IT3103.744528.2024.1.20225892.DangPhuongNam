@@ -25,7 +25,7 @@ public class NumberGrid extends JFrame {
         cp.add(panelButtons, BorderLayout.CENTER);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setTitle("Number Grid");
+        setTitle("Number Grid Nam 20225892");
         setSize(200, 200);
         setVisible(true);
     }

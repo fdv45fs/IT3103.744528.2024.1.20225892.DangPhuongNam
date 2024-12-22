@@ -9,11 +9,10 @@ import javafx.stage.Stage;
 public class Painter extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass()
-                .getResource("/hust/ite6/javafx/Painter.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/hust/ite6/javafx/Painter.fxml"));
 
         Scene scene = new Scene(root);
-        stage.setTitle("Painter");
+        stage.setTitle("Painter Nam 20225892");
         stage.setScene(scene);
         stage.show();
     }
